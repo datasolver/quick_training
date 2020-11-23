@@ -1,0 +1,36 @@
+Sandstone
+Silty Sand
+Cross Bedded Sst
+Sandy Silt
+Silt
+Shaly Silt
+Silty Shale
+Shale
+Chalk
+Porous Limestone
+Limestone
+Argillaceous Limestone
+Marlstone
+Calcareous Shale
+Dolomite
+Calcareous Cement
+Conglomerate
+Coal
+Cinerite
+Volcanic Tuff
+Halite
+Anhydrite
+Basement
+Plutonic Rock
+Biogenic Ooze
+Gap
+Sylvinite
+Volcanic Rock
+Spiculite
+Metamorphic Rock
+Calcareous Debris Flow
+Polyhalite
+Carnallite
+Kaïnite
+Aeolian Sandstone
+Arkose
