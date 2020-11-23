@@ -1,0 +1,1143 @@
+
+
+
+ $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+ $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+ $      $      $       $   $   $  $      $         $   $   $  $   $
+ $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+ $      $      $       $   $          $  $         $   $   $  $   $
+ $      $   $  $       $   $      $   $  $         $   $   $  $   $
+ $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                       $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                       $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                       $      $      $       $   $   $  $      $         $   $   $  $   $
+                       $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                       $      $      $       $   $          $  $         $   $   $  $   $
+                       $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                       $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                                             $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                                             $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                                             $      $      $       $   $   $  $      $         $   $   $  $   $
+                                             $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                                             $      $      $       $   $          $  $         $   $   $  $   $
+                                             $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                                             $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                                                                   $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                                                                   $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                                                                   $      $      $       $   $   $  $      $         $   $   $  $   $
+                                                                   $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                                                                   $      $      $       $   $          $  $         $   $   $  $   $
+                                                                   $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                                                                   $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+Proprietary Notice
+This application contains the confidential and proprietary trade secrets of Schlumberger and may not be copied or stored in an
+information retrieval system, transferred, used, distributed, translated, or retransmitted in any form or by any means, electronic
+or mechanical, in whole or in part, without the express written permission of the copyright owner.
+
+ECLIPSE is a mark of Schlumberger. Copyright (c) 1981-2015 Schlumberger. All rights reserved.
+
+Version =  2015.2  
+Arch    =  PC WINDOWS (64 bit, PC_IL1364VS110OPT)
+
+Annex    | Modification date    | Update date          | baseline             
+=====    | =================    | ===========          | ========             
+ECLIPSE  | 20-NOV-2015 09:49:24 | 24-NOV-2015 12:51:22 | 2015.2_557468
+petlast  | 20-MAR-2015 11:52:25 | 24-NOV-2015 12:51:26 | 2015.2_557468
+system   | 30-JUN-2015 14:36:10 | 24-NOV-2015 12:51:29 | 2015.2_557468
+tpb      | 20-MAR-2015 11:52:25 | 24-NOV-2015 12:51:29 | 2015.2_557468
+utility  | 20-MAR-2015 11:52:25 | 24-NOV-2015 12:51:29 | 2015.2_557468
+ 
+
+1
+
+ ******** ECHO OF INPUT DATA FOR RUN LOW_SALT
+
+ 0: -----------------------------------------------------------------------------------------------------------------
+ 0: -- This is Low salinity water injection example data set. To make relative permeability
+ 0: -- and capillary pressure salinity dependent to mimic a decrease of residual oil saturatoin
+ 0: -- induced by fresh water injection.
+ 0: -- 3 phase. New Keywords added: LOWSALT, LSALTFNC, LWSLTNUM, LSLTWNUM. For more info read Brine Tracking Option.
+ 0: -- The run contains surfactant and polymer combined with low salinity functionality.
+ 0: ------------------------------------------------------------------------------------------------------------------
+ 0: RUNSPEC     ==================================================================================================
+ 0: TITLE
+ 0:  Fresh water injection /
+ 0: 
+ 0: DIMENS
+ 0:    15   15    3  /
+ 0: 
+ 0: OIL
+ 0: WATER
+ 0: GAS
+ 0: 
+ 0: LOWSALT
+ 0: 
+ 0: METRIC
+ 0: 
+ 0: TABDIMS
+ 0:     2    1   20   20    1   20 /
+ 0: 
+ 0: WELLDIMS
+ 0:     3    10    1    3 /
+ 0: 
+ 0: START
+ 0:    1 'JAN' 1990  /
+ 0: 
+ 0: UNIFIN
+ 0: UNIFOUT
+ 0: 
+ 0: ACTDIMS
+ 0: 10 /
+ 0: 
+ 0: UDQDIMS
+ 0: --MAX NO.     MAX NO.   MAX NO.     MAX NO.  MAX   MAX   MAX     MAX   MAX      MAX
+ 0: --FUNCTIONS   ARGUMNTS  CONECTION   FIELD    GRUP  REGN  SEGMNT  WELL  AQUIFER  BLOCK
+ 0:     12           12        2          10        0     4    0      10    0        4  /
+ 0: 
+ 0: UDQPARAM
+ 0: -- SEED  RANGE  UNDEFINEDVALUE  TOLERANCE
+ 0:     1     1e19     -2.5         1.0E-4     /
+ 0: 
+ 0: --NOSIM
+ 0: GRID      ==============================================================
+ 0: 
+ 0: INIT
+ 0: 
+ 0: DX
+ 0:   675*10   /
+ 0: DY
+ 0:   675*10   /
+ 0: DZ
+ 0:   675*10   /
+ 0: 
+ 0: PERMX
+ 0:   675*200   /
+ 0: 
+ 0: COPY
+ 0:  PERMX  PERMY  /
+ 0:  PERMX  PERMZ  /
+ 0: /
+ 0: 
+ 0: MULTIPLY
+ 0: PERMZ 0.1 /
+ 0: /
+ 0: PORO
+ 0:   675*0.25   /
+ 0: 
+ 0: TOPS
+ 0:  225*2600 /
+ 0: 
+ 0: PROPS     ==============================================================
+ 0: LSALTFNC
+ 0: 0.0    0.5  1*
+ 0: 10.0   0.3  1*
+ 0: 20.0   0.1  1*
+ 0: /
+ 0: 
+ 0: /
+ 0: SWOF
+ 0: -- SL = SWCR = 0.2   High salinity curves
+ 0: --   Sw   Krw   Pwo
+ 0: 			
+ 0: 0.200		0.000		1.000		0
+ 0: 0.255		0.005		0.729		0
+ 0: 0.310		0.020		0.512		0
+ 0: 0.365		0.045		0.343		0
+ 0: 0.420		0.080		0.216		0
+ 0: 0.475		0.125		0.125		0
+ 0: 0.530		0.180		0.064		0
+ 0: 0.585		0.245		0.027		0
+ 0: 0.640		0.320		0.008		0
+ 0: 0.695		0.405		0.001		0
+ 0: 0.750		0.500		0.000		0
+ 0: 1.000		1.000		0.000		0
+ 0: /
+ 0: -- low salinity   or
+ 0:  -- Sw	Krw			 Kro
+ 0: 0.150		0.000		1.000   0
+ 0: 0.225		0.004		0.729   0
+ 0: 0.300		0.014		0.512   0
+ 0: 0.375		0.032		0.343   0
+ 0: 0.450		0.056		0.216   0
+ 0: 0.525		0.088		0.125   0
+ 0: 0.600		0.126		0.064   0
+ 0: 0.675		0.172		0.027   0
+ 0: 0.750		0.224		0.008   0
+ 0: 0.825		0.284		0.001   0
+ 0: 0.900		0.350		0.000   0
+ 0: 1.000		1.000		0.000		0
+ 0: /
+ 0: 
+ 0: SGOF
+ 0: -- High salinity curves
+ 0: -- SG		Krg			Kro			Pc
+ 0: 0.00	0.000		1.000		0.000
+ 0: 0.08	0.001		0.729		0.000
+ 0: 0.16	0.005		0.512		0.000
+ 0: 0.24	0.016		0.343		0.000
+ 0: 0.32	0.038		0.216		0.000
+ 0: 0.40	0.075		0.125		0.000
+ 0: 0.48	0.130		0.064		0.000
+ 0: 0.56	0.206		0.027		0.000
+ 0: 0.64	0.307		0.008		0.000
+ 0: 0.72	0.437		0.001		0.000
+ 0: 0.80	0.600		0.000		0.000
+ 0: /
+ 0: -- Low salinity curves
+ 0: 0.00	0.000		1.000		0.000
+ 0: 0.09	0.005		0.810		0.000
+ 0: 0.17	0.020		0.640		0.000
+ 0: 0.26	0.045		0.490		0.000
+ 0: 0.34	0.080		0.360		0.000
+ 0: 0.43	0.125		0.250		0.000
+ 0: 0.51	0.180		0.160		0.000
+ 0: 0.60	0.245		0.090		0.000
+ 0: 0.68	0.320		0.040		0.000
+ 0: 0.77	0.405		0.010		0.000
+ 0: 0.85	0.500		0.000		0.000
+ 0: /
+ 0: PVDO
+ 0:   200    1.0     0.47
+ 0:   280    0.999   0.47
+ 0:   300    0.998   0.47
+ 0: /
+ 0: 
+ 0: PVDG
+ 0: --   PGAS   BGAS   		VISGAS
+ 0: 10.00000		0.12668		0.01316
+ 0: 35.78947		0.03436		0.01361
+ 0: 61.57895		0.01944		0.01426
+ 0: 87.36842		0.01340		0.01506
+ 0: 113.15789		0.01017		0.01601
+ 0: 138.94737		0.00820		0.01711
+ 0: 164.73684		0.00689		0.01832
+ 0: 190.52632		0.00599		0.01962
+ 0: 216.31579		0.00533		0.02097
+ 0: 242.10526		0.00484		0.02234
+ 0: 270.00000		0.00444		0.02383
+ 0: 293.68421		0.00417		0.02507
+ 0: 319.47368		0.00393		0.02640
+ 0: 345.26316		0.00374		0.02770
+ 0: 371.05263		0.00358		0.02896
+ 0: 396.84211		0.00344		0.03019
+ 0: 422.63158		0.00332		0.03138
+ 0: 448.42105		0.00322		0.03254
+ 0: 474.21053		0.00313		0.03367
+ 0: 500.00000		0.00305		0.03476
+ 0: /
+ 0: ROCK
+ 0:  270 .3E-5 /
+ 0: 
+ 0: DENSITY
+ 0: -- o   w    g
+ 0:  850. 1000. 1.2 /
+ 0: PVTWSALT
+ 0:  270.0 0.0/
+ 0:  0.0  1.030  4.6E-5  0.5  0.0
+ 0: 10.0  1.030  4.6E-5  0.5  0.0 /
+ 0: 
+ 0: REGIONS    =============================================================
+ 0: 
+ 0: SATNUM
+ 0: -- immiscible, high salinity = 1
+ 0:  675*1 /
+ 0: 
+ 0: LWSLTNUM
+ 0: -- low salinity curves
+ 0:  675*2
+ 0: /
+ 0: 
+ 0: RPTREGS
+ 0:  24*0 /
+ 0: 
+ 0: RPTREGS
+ 0: SURFNUM LWSLTNUM LSLTWNUM /
+ 0: SOLUTION   =============================================================
+ 0: 
+ 0: EQUIL
+ 0: -- Datum   Pressure   WOC
+ 0: 2680       270        2680 1*  2000/
+ 0: 
+ 0: SALTVD
+ 0:  5000.0  30.0
+ 0:  5500.0  30.0 /
+ 0: 
+ 0: RPTRST
+ 0: 'BASIC=2'  /
+ 0: 
+ 0: SUMMARY    ===========================================================
+ 0: FSPR
+ 0: FSPT
+ 0: FSIR
+ 0: FSIT
+ 0: FWIR
+ 0: FOPR
+ 0: FGPR
+ 0: FOPT
+ 0: FPR
+ 0: FOPV
+ 0: FWIT
+ 0: FOE
+ 0: TCPU
+ 0: GSPR
+ 0:  'G' /
+ 0: 
+ 0: GSPT
+ 0:  'G' /
+ 0: GSIR
+ 0:  'G' /
+ 0: GSIT
+ 0:  'G' /
+ 0: GSPR
+ 0:  'G' /
+ 0: WSPR
+ 0:  'OP' /
+ 0: WSPT
+ 0:  'OP' /
+ 0: WSIR
+ 0: 'INJ' /
+ 0: WSIT
+ 0: 'OP ' /
+ 0: WBHP
+ 0: /
+ 0: WOPR
+ 0: 'OP' /
+ 0: WGPR
+ 0: 'OP' /
+ 0: WLPR
+ 0: 'OP' /
+ 0: WWPR
+ 0: 'OP' /
+ 0: WWCT
+ 0: 'OP' /
+ 0: WWIR
+ 0: 'INJ'/
+ 0: CSFR
+ 0:  'OP'  15 15 1 /      con. salt flow rate (+/-)
+ 0:  'INJ'  1 1 1 /
+ 0: /
+ 0: CSPT
+ 0:  'OP'  15 15 1 /
+ 0: /
+ 0: CSIT
+ 0:  'INJ'  1 1 1 /
+ 0: /
+ 0: 
+ 0: BSCN
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BSIP
+ 0:  1 1 1 / salt in place
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: 
+ 0: BPR
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0:  /
+ 0: 
+ 0: BOSAT
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: 
+ 0: /
+ 0: BGSAT
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BWSAT
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BWVIS
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: 
+ 0: 
+ 0: BOKR
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BGKR
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BWKR
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: BWKR
+ 0:  1 1 1 /
+ 0:  1 1 2 /
+ 0:  4 4 1 /
+ 0:  5 5 1 /
+ 0:  7 7 1 /
+ 0: 10 10 1 /
+ 0: 12 12 1 /
+ 0: 14 14 1 /
+ 0: 15 15 1 /
+ 0: /
+ 0: FUHCPVI
+ 0: 
+ 0: ALL
+ 0: SEPARATE
+ 0: RUNSUM
+ 0: MSUMLINS
+ 0: MSUMNEWT
+ 0: 
+ 0: SCHEDULE   ===========================================================
+ 0: 
+ 0: TUNING
+ 0: 
+ 0: WELSPECS
+ 0: 'OP'   'G'   15 15  2600  'OIL'  /
+ 0: 'INJ'  'G'   1  1   2600  'WAT'  /
+ 0: /
+ 0: COMPDAT
+ 0: 'OP      '   15   15   1   3  'OPEN'   0  .0   157E-3 /
+ 0: 'INJ     '   1    1    1   3  'OPEN'   0  .0   157E-3 /
+ 0: /
+ 0: 
+ 0: WCONPROD
+ 0: 'OP' 'OPEN' 'RESV' 4* 100 0.0 4* /
+ 0: /
+ 0: 
+ 0: WCONINJE
+ 0: 'INJ'  'WAT' 'OPEN' 'RESV' 1* 100  /
+ 0: /
+ 0: 
+ 0: UDQ
+ 0: DEFINE FUHCPV FOPV /
+ 0: UPDATE FUHCPV NEXT /
+ 0: /
+ 0: TSTEP
+ 0: 1 /
+ 0: WCONPROD
+ 0: 'OP' 'OPEN' 'RESV' 4* 100 0.0 4* /
+ 0: /
+ 0: 
+ 0: WCONINJE
+ 0: 'INJ' 'WAT' 'OPEN' 'RESV' 1* 100  /
+ 0: /
+ 0: 
+ 0: UDQ
+ 0: DEFINE FUHCPVI FWIT/FUHCPV /
+ 0: /
+ 0: 
+ 0: TSTEP
+ 0: 12*10 /
+ 0: WSALT
+ 0: INJ 0.0 /
+ 0: /
+ 0: TSTEP
+ 0: 8*30/
+ 0: WSALT
+ 0: INJ 30 /
+ 0: /
+ 0: TSTEP
+ 0: 3*30/
+ 0: TSTEP
+ 0: 6*30/
+ 0: 
+ 0: 
+ 0: END
+ 0: 
+ 0: 
+
+ ******** END OF INPUT DATA FOR RUN LOW_SALT
+     1 READING RUNSPEC 
+     2 READING TITLE   
+     3 READING DIMENS  
+     4 READING OIL     
+     5 READING WATER   
+     6 READING GAS     
+     7 READING LOWSALT 
+     8 READING METRIC  
+     9 READING TABDIMS 
+    10 READING WELLDIMS
+    11 READING START   
+    12 READING UNIFIN  
+    13 READING UNIFOUT 
+    14 READING ACTDIMS 
+    15 READING UDQDIMS 
+    16 READING UDQPARAM
+    17 READING GRID    
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           CHECKING FOR LICENSES                                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           CHECKING FOR LICENSES                                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS              
+ @               283752 BYTES                                                
+    18 READING INIT    
+    19 READING DX      
+    20 READING DY      
+    21 READING DZ      
+    22 READING PERMX   
+    23 READING COPY    
+    24 READING MULTIPLY
+    25 READING PORO    
+    26 READING TOPS    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @                    450 VALUES NOT DEFINED IN BOX (  1- 15,  1- 15,  1-  3)
+ @           OF KEYWORD TOPS                                                 
+    27 READING PROPS   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           UNSPECIFIED TOPS VALUES OBTAINED BY ADDING DZ                   
+ @           TO TOPS VALUE FOR LAYER ABOVE                                   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                  
+ @           BLOCK CENTRE TRANSMISSIBILITIES TO BE CALCULATED                
+ @           USING  OLDTRAN                                                  
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           NO NON-NEIGHBOUR CONNECTIONS FOUND                              
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           NUMBER OF ACTIVE CELLS IS 675                                   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS          
+ @                 1295 KBYTES                                               
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @              67110 CHARACTER VARIABLES USED                               
+    28 READING LSALTFNC
+    29 READING SWOF    
+    30 READING SGOF    
+    31 READING PVDO    
+    32 READING PVDG    
+    33 READING ROCK    
+    34 READING DENSITY 
+    35 READING PVTWSALT
+    36 READING REGIONS 
+    37 READING SATNUM  
+    38 READING LWSLTNUM
+    39 READING RPTREGS 
+    40 READING RPTREGS 
+    41 READING SOLUTION
+1                             **********************************************************************   1
+  LWSLTNUM AT      0.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   0     1 JAN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ (I,  J,  K) I=  1       2       3       4       5       6       7       8       9      10      11      12      13      14      15
+
+ (*,  1,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  2,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  3,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  4,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  5,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  6,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  7,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  8,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  9,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 10,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 11,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 12,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 13,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 14,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 15,  1)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+
+ (I,  J,  K) I=  1       2       3       4       5       6       7       8       9      10      11      12      13      14      15
+
+ (*,  1,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  2,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  3,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  4,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  5,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  6,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  7,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  8,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  9,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 10,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 11,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 12,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 13,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 14,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 15,  2)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+
+ (I,  J,  K) I=  1       2       3       4       5       6       7       8       9      10      11      12      13      14      15
+
+ (*,  1,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  2,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  3,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  4,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  5,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  6,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  7,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  8,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*,  9,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 10,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 11,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 12,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 13,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 14,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+ (*, 15,  3)     2       2       2       2       2       2       2       2       2       2       2       2       2       2       2   
+    42 READING EQUIL   
+    43 READING SALTVD  
+    44 READING RPTRST  
+    45 READING SUMMARY 
+    46 READING FSPR    
+    47 READING FSPT    
+    48 READING FSIR    
+    49 READING FSIT    
+    50 READING FWIR    
+    51 READING FOPR    
+    52 READING FGPR    
+    53 READING FOPT    
+    54 READING FPR     
+    55 READING FOPV    
+    56 READING FWIT    
+    57 READING FOE     
+    58 READING TCPU    
+    59 READING GSPR    
+    60 READING GSPT    
+    61 READING GSIR    
+    62 READING GSIT    
+    63 READING GSPR    
+    64 READING WSPR    
+    65 READING WSPT    
+    66 READING WSIR    
+    67 READING WSIT    
+    68 READING WBHP    
+    69 READING WOPR    
+    70 READING WGPR    
+    71 READING WLPR    
+    72 READING WWPR    
+    73 READING WWCT    
+    74 READING WWIR    
+    75 READING CSFR    
+    76 READING CSPT    
+    77 READING CSIT    
+    78 READING BSCN    
+    79 READING BSIP    
+    80 READING BPR     
+    81 READING BOSAT   
+    82 READING BGSAT   
+    83 READING BWSAT   
+    84 READING BWVIS   
+    85 READING BOKR    
+    86 READING BGKR    
+    87 READING BWKR    
+    88 READING BWKR    
+    89 READING FUHCPVI 
+    90 READING ALL     
+    91 READING SEPARATE
+    92 READING RUNSUM  
+    93 READING MSUMLINS
+    94 READING MSUMNEWT
+    95 READING SCHEDULE
+    96 READING TUNING  
+    97 READING WELSPECS
+    98 READING COMPDAT 
+    99 READING WCONPROD
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           THE BOTTOM HOLE PRESSURE LIMIT FOR WELL OP                      
+ @           HAS BEEN DEFAULTED.  THE DEFAULT VALUE IS                       
+ @                1.0   BARSA                                                
+   100 READING WCONINJE
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           THE BOTTOM HOLE PRESSURE LIMIT FOR WELL INJ                     
+ @           HAS BEEN DEFAULTED. THE DEFAULT VALUE IS    6891.   BARSA       
+   101 READING UDQ     
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           FUHCPV INITIALISED AS USER DEFINED QUANTITY NO. 1               
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           FUHCPV DEFINITION PARSED. UPDATE STATUS SET TO ON.              
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           FUHCPV UPDATE STATUS SET TO NEXT.                               
+   102 READING TSTEP   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-1990):
+ @           RESTART FILE WRITTEN   REPORT     0                             
+1                             **********************************************************************   2
+  SIMULATE AT      0.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   0     1 JAN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP    1 TIME=      1.00  DAYS (    +1.0  DAYS REPT  3 ITS) (2-JAN-1990)       
+  PAV=   264.6  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME        1.0   DAYS    ( 2-JAN-1990):
+ @           RESTART FILE WRITTEN   REPORT     1                             
+   103 READING WCONPROD
+
+ @--WARNING  AT TIME        1.0   DAYS    ( 2-JAN-1990):
+ @           THE BOTTOM HOLE PRESSURE LIMIT FOR WELL OP                      
+ @           HAS BEEN DEFAULTED.  THE DEFAULT VALUE IS                       
+ @                1.0   BARSA                                                
+   104 READING WCONINJE
+
+ @--WARNING  AT TIME        1.0   DAYS    ( 2-JAN-1990):
+ @           THE BOTTOM HOLE PRESSURE LIMIT FOR WELL INJ                     
+ @           HAS BEEN DEFAULTED. THE DEFAULT VALUE IS    6891.   BARSA       
+   105 READING UDQ     
+
+ @--MESSAGE  AT TIME        1.0   DAYS    ( 2-JAN-1990):
+ @           FUHCPVI INITIALISED AS USER DEFINED QUANTITY NO. 2              
+
+ @--MESSAGE  AT TIME        1.0   DAYS    ( 2-JAN-1990):
+ @           FUHCPVI DEFINITION PARSED. UPDATE STATUS SET TO ON.             
+   106 READING TSTEP   
+1                             **********************************************************************   3
+  SIMULATE AT      1.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   1     2 JAN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP    2 TIME=      1.88  DAYS (   +21.1 HOURS TRNC  3 ITS) (2-JAN-1990)       
+  PAV=   264.6  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP    3 TIME=      3.67  DAYS (    +1.8  DAYS TRNC  2 ITS) (4-JAN-1990)       
+  PAV=   264.6  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP    4 TIME=      5.60  DAYS (    +1.9  DAYS TRNC  2 ITS) (6-JAN-1990)       
+  PAV=   264.6  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP    5 TIME=      8.30  DAYS (    +2.7  DAYS HALF  2 ITS) (9-JAN-1990)       
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP    6 TIME=     11.00  DAYS (    +2.7  DAYS REPT  2 ITS) (12-JAN-1990)      
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       11.0   DAYS    (12-JAN-1990):
+ @           RESTART FILE WRITTEN   REPORT     2                             
+1                             **********************************************************************   4
+  SIMULATE AT     11.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   2    12 JAN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP    7 TIME=     15.73  DAYS (    +4.7  DAYS TRNC  3 ITS) (16-JAN-1990)      
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP    8 TIME=     21.00  DAYS (    +5.3  DAYS REPT  3 ITS) (22-JAN-1990)      
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       21.0   DAYS    (22-JAN-1990):
+ @           RESTART FILE WRITTEN   REPORT     3                             
+1                             **********************************************************************   5
+  SIMULATE AT     21.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   3    22 JAN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP    9 TIME=     26.00  DAYS (    +5.0  DAYS HALF  2 ITS) (27-JAN-1990)      
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   10 TIME=     31.00  DAYS (    +5.0  DAYS REPT  2 ITS) (1-FEB-1990)       
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       31.0   DAYS    ( 1-FEB-1990):
+ @           RESTART FILE WRITTEN   REPORT     4                             
+1                             **********************************************************************   6
+  SIMULATE AT     31.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   4     1 FEB 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   11 TIME=     36.00  DAYS (    +5.0  DAYS HALF  2 ITS) (6-FEB-1990)       
+  PAV=   264.5  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   12 TIME=     41.00  DAYS (    +5.0  DAYS REPT  2 ITS) (11-FEB-1990)      
+  PAV=   264.4  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       41.0   DAYS    (11-FEB-1990):
+ @           RESTART FILE WRITTEN   REPORT     5                             
+1                             **********************************************************************   7
+  SIMULATE AT     41.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   5    11 FEB 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   13 TIME=     51.00  DAYS (   +10.0  DAYS REPT  3 ITS) (21-FEB-1990)      
+  PAV=   264.4  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       51.0   DAYS    (21-FEB-1990):
+ @           RESTART FILE WRITTEN   REPORT     6                             
+1                             **********************************************************************   8
+  SIMULATE AT     51.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   6    21 FEB 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   14 TIME=     61.00  DAYS (   +10.0  DAYS REPT  3 ITS) (3-MAR-1990)       
+  PAV=   264.4  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       61.0   DAYS    ( 3-MAR-1990):
+ @           RESTART FILE WRITTEN   REPORT     7                             
+1                             **********************************************************************   9
+  SIMULATE AT     61.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   7     3 MAR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   15 TIME=     71.00  DAYS (   +10.0  DAYS REPT  3 ITS) (13-MAR-1990)      
+  PAV=   264.4  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       71.0   DAYS    (13-MAR-1990):
+ @           RESTART FILE WRITTEN   REPORT     8                             
+1                             **********************************************************************  10
+  SIMULATE AT     71.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   8    13 MAR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   16 TIME=     81.00  DAYS (   +10.0  DAYS REPT  3 ITS) (23-MAR-1990)      
+  PAV=   264.3  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       81.0   DAYS    (23-MAR-1990):
+ @           RESTART FILE WRITTEN   REPORT     9                             
+1                             **********************************************************************  11
+  SIMULATE AT     81.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT   9    23 MAR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   17 TIME=     91.00  DAYS (   +10.0  DAYS REPT  3 ITS) (2-APR-1990)       
+  PAV=   264.3  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME       91.0   DAYS    ( 2-APR-1990):
+ @           RESTART FILE WRITTEN   REPORT    10                             
+1                             **********************************************************************  12
+  SIMULATE AT     91.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  10     2 APR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   18 TIME=    101.00  DAYS (   +10.0  DAYS REPT  2 ITS) (12-APR-1990)      
+  PAV=   264.3  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      101.0   DAYS    (12-APR-1990):
+ @           RESTART FILE WRITTEN   REPORT    11                             
+1                             **********************************************************************  13
+  SIMULATE AT    101.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  11    12 APR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   19 TIME=    111.00  DAYS (   +10.0  DAYS REPT  3 ITS) (22-APR-1990)      
+  PAV=   264.3  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      111.0   DAYS    (22-APR-1990):
+ @           RESTART FILE WRITTEN   REPORT    12                             
+1                             **********************************************************************  14
+  SIMULATE AT    111.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  12    22 APR 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   20 TIME=    121.00  DAYS (   +10.0  DAYS REPT  2 ITS) (2-MAY-1990)       
+  PAV=   264.3  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      121.0   DAYS    ( 2-MAY-1990):
+ @           RESTART FILE WRITTEN   REPORT    13                             
+   107 READING WSALT   
+   108 READING TSTEP   
+1                             **********************************************************************  15
+  SIMULATE AT    121.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  13     2 MAY 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   21 TIME=    136.00  DAYS (   +15.0  DAYS HALF  3 ITS) (17-MAY-1990)      
+  PAV=   264.2  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   22 TIME=    151.00  DAYS (   +15.0  DAYS REPT  3 ITS) (1-JUN-1990)       
+  PAV=   264.2  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      151.0   DAYS    ( 1-JUN-1990):
+ @           RESTART FILE WRITTEN   REPORT    14                             
+1                             **********************************************************************  16
+  SIMULATE AT    151.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  14     1 JUN 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   23 TIME=    166.00  DAYS (   +15.0  DAYS HALF  3 ITS) (16-JUN-1990)      
+  PAV=   264.2  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   24 TIME=    181.00  DAYS (   +15.0  DAYS REPT  3 ITS) (1-JLY-1990)       
+  PAV=   264.2  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      181.0   DAYS    ( 1-JLY-1990):
+ @           RESTART FILE WRITTEN   REPORT    15                             
+1                             **********************************************************************  17
+  SIMULATE AT    181.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  15     1 JLY 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   25 TIME=    196.00  DAYS (   +15.0  DAYS HALF  3 ITS) (16-JLY-1990)      
+  PAV=   264.1  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   26 TIME=    211.00  DAYS (   +15.0  DAYS REPT  3 ITS) (31-JLY-1990)      
+  PAV=   264.1  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      211.0   DAYS    (31-JLY-1990):
+ @           RESTART FILE WRITTEN   REPORT    16                             
+1                             **********************************************************************  18
+  SIMULATE AT    211.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  16    31 JLY 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   27 TIME=    226.00  DAYS (   +15.0  DAYS HALF  3 ITS) (15-AUG-1990)      
+  PAV=   264.1  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   28 TIME=    241.00  DAYS (   +15.0  DAYS REPT  3 ITS) (30-AUG-1990)      
+  PAV=   264.1  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      241.0   DAYS    (30-AUG-1990):
+ @           RESTART FILE WRITTEN   REPORT    17                             
+1                             **********************************************************************  19
+  SIMULATE AT    241.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  17    30 AUG 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   29 TIME=    256.00  DAYS (   +15.0  DAYS HALF  2 ITS) (14-SEP-1990)      
+  PAV=   264.1  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   30 TIME=    271.00  DAYS (   +15.0  DAYS REPT  2 ITS) (29-SEP-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      271.0   DAYS    (29-SEP-1990):
+ @           RESTART FILE WRITTEN   REPORT    18                             
+1                             **********************************************************************  20
+  SIMULATE AT    271.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  18    29 SEP 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   31 TIME=    286.00  DAYS (   +15.0  DAYS HALF  3 ITS) (14-OCT-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   32 TIME=    301.00  DAYS (   +15.0  DAYS REPT  2 ITS) (29-OCT-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      301.0   DAYS    (29-OCT-1990):
+ @           RESTART FILE WRITTEN   REPORT    19                             
+1                             **********************************************************************  21
+  SIMULATE AT    301.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  19    29 OCT 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   33 TIME=    316.00  DAYS (   +15.0  DAYS HALF  2 ITS) (13-NOV-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   34 TIME=    331.00  DAYS (   +15.0  DAYS REPT  2 ITS) (28-NOV-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      331.0   DAYS    (28-NOV-1990):
+ @           RESTART FILE WRITTEN   REPORT    20                             
+1                             **********************************************************************  22
+  SIMULATE AT    331.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  20    28 NOV 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   35 TIME=    346.00  DAYS (   +15.0  DAYS HALF  2 ITS) (13-DEC-1990)      
+  PAV=   264.0  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   36 TIME=    361.00  DAYS (   +15.0  DAYS REPT  2 ITS) (28-DEC-1990)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      361.0   DAYS    (28-DEC-1990):
+ @           RESTART FILE WRITTEN   REPORT    21                             
+   109 READING WSALT   
+   110 READING TSTEP   
+1                             **********************************************************************  23
+  SIMULATE AT    361.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  21    28 DEC 1990   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   37 TIME=    376.00  DAYS (   +15.0  DAYS HALF  2 ITS) (12-JAN-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   38 TIME=    391.00  DAYS (   +15.0  DAYS REPT  2 ITS) (27-JAN-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      391.0   DAYS    (27-JAN-1991):
+ @           RESTART FILE WRITTEN   REPORT    22                             
+1                             **********************************************************************  24
+  SIMULATE AT    391.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  22    27 JAN 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   39 TIME=    406.00  DAYS (   +15.0  DAYS HALF  2 ITS) (11-FEB-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   40 TIME=    421.00  DAYS (   +15.0  DAYS REPT  2 ITS) (26-FEB-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      421.0   DAYS    (26-FEB-1991):
+ @           RESTART FILE WRITTEN   REPORT    23                             
+1                             **********************************************************************  25
+  SIMULATE AT    421.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  23    26 FEB 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   41 TIME=    436.00  DAYS (   +15.0  DAYS HALF  2 ITS) (13-MAR-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   42 TIME=    451.00  DAYS (   +15.0  DAYS REPT  2 ITS) (28-MAR-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      451.0   DAYS    (28-MAR-1991):
+ @           RESTART FILE WRITTEN   REPORT    24                             
+   111 READING TSTEP   
+1                             **********************************************************************  26
+  SIMULATE AT    451.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  24    28 MAR 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   43 TIME=    466.00  DAYS (   +15.0  DAYS HALF  2 ITS) (12-APR-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   44 TIME=    481.00  DAYS (   +15.0  DAYS REPT  2 ITS) (27-APR-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      481.0   DAYS    (27-APR-1991):
+ @           RESTART FILE WRITTEN   REPORT    25                             
+1                             **********************************************************************  27
+  SIMULATE AT    481.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  25    27 APR 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   45 TIME=    496.00  DAYS (   +15.0  DAYS HALF  2 ITS) (12-MAY-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ STEP   46 TIME=    511.00  DAYS (   +15.0  DAYS REPT  2 ITS) (27-MAY-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      511.0   DAYS    (27-MAY-1991):
+ @           RESTART FILE WRITTEN   REPORT    26                             
+1                             **********************************************************************  28
+  SIMULATE AT    511.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  26    27 MAY 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   47 TIME=    541.00  DAYS (   +30.0  DAYS REPT  3 ITS) (26-JUN-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      541.0   DAYS    (26-JUN-1991):
+ @           RESTART FILE WRITTEN   REPORT    27                             
+1                             **********************************************************************  29
+  SIMULATE AT    541.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  27    26 JUN 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   48 TIME=    571.00  DAYS (   +30.0  DAYS REPT  3 ITS) (26-JLY-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      571.0   DAYS    (26-JLY-1991):
+ @           RESTART FILE WRITTEN   REPORT    28                             
+1                             **********************************************************************  30
+  SIMULATE AT    571.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  28    26 JLY 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   49 TIME=    601.00  DAYS (   +30.0  DAYS REPT  4 ITS) (25-AUG-1991)      
+  PAV=   263.9  BARSA  WCT=0.000 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      601.0   DAYS    (25-AUG-1991):
+ @           RESTART FILE WRITTEN   REPORT    29                             
+1                             **********************************************************************  31
+  SIMULATE AT    601.00  DAYS * Fresh water injection /                                                * ECLIPSE  VERSION 2015.2     
+  REPORT  29    25 AUG 1991   *  RUN                                                                   * RUN AT 15:29 ON 09 NOV 2018 
+                              **************************************************************************
+
+ STEP   50 TIME=    631.00  DAYS (   +30.0  DAYS REPT  4 ITS) (24-SEP-1991)      
+  PAV=   263.9  BARSA  WCT=0.001 GOR= 0.00000   SM3/SM3 WGR= 0.00000   SM3/SM3   
+
+ @--MESSAGE  AT TIME      631.0   DAYS    (24-SEP-1991):
+ @           RESTART FILE WRITTEN   REPORT    30                             
+   112 READING END     
+            4 Mbytes of storage required                         
+   6.1652     KB/active cell                                     
+           25 Mbytes (image size)                                
+
+ Error summary 
+ Comments               1
+ Warnings               5
+ Problems               0
+ Errors                 0
+ Bugs                   0
+ Final cpu       1.62 elapsed       1.62
+ Total number of time steps forced to be accepted          0
