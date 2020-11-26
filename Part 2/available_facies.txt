@@ -1,0 +1,18 @@
+1	SS	Sand
+2	SiS	Sand
+3	CBS	CrossBedded Sand
+4	ShSS	Shaly Sandstone
+5	Si	Silt
+6	ShSi	Silt
+7	SiSh	Shale
+9	Ch	Chalk
+10	CaSS	Calcareous Sandstone
+11	Li	Limestone
+12	ArLi	Chalk
+13	MS	Chalk
+16	SSLi	Sandy Limestone
+18	Coal	Coal
+19	Cin	Extrusive
+21	Hal	Halite
+22	Anh	Anhydrite
+26	Gyp	Gypsum
